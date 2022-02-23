@@ -8,6 +8,7 @@ https://agustinus.kristia.de/techblog/2017/09/07/lda-gibbs/
 Symbols for all the parameters follow Griffiths et al 2004: 
 https://www.pnas.org/content/pnas/101/suppl_1/5228.full.pdf?__=
 T: Number of topics
+W: The collection of all the words
 n_w: Number of words
 D: Number of documents
 
@@ -42,7 +43,6 @@ def lda_gibbs_param_smart(D, T, W, Theta, Phi, X, Z, alpha, beta, iterations=100
                 Z[i, v] = np.random.multinomial(1, p_iv).argmax()
 
         # Sample from full conditional of Theta - document-topic distribution
-        # ----------------------------------
         for d in range(D):
             for j in range(T):
                 n_jd = np.sum(Z[d]==j)
@@ -50,7 +50,6 @@ def lda_gibbs_param_smart(D, T, W, Theta, Phi, X, Z, alpha, beta, iterations=100
                 Theta[d][j] = (n_jd + alpha) / (n_ad + T*alpha)
 
         # Sample from full conditional of Phi - topic-word distribution
-        # ---------------------------------
         for j in range(T):
             for w in range(n_w):
                 n_jw = find_n_jw(Z, X, j, w)

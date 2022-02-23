@@ -1,6 +1,6 @@
 # Baby_LDA_Implementation
 
-This is a tiny LDA implementation from Boyuan Chen. The goal is to help first-time topic-modeling learners to acquire the knowledge faster. The corpus looks like:
+This is a tiny LDA implementation from Boyuan Chen and Yi Wei. The goal is to help first-time topic-modeling learners to acquire the knowledge faster. The corpus looks like:
 <pre>
 X = np.array([
     [0, 0, 1, 2, 2],

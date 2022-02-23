@@ -1,5 +1,5 @@
 import numpy as np
-import lda_corpus
+import lda
 import dist_gen
 
 '''
@@ -8,7 +8,8 @@ https://agustinus.kristia.de/techblog/2017/09/07/lda-gibbs/
 ----------------------
 All the parameters correspond to Finding scientific topics 2004. 
 T: Number of topics
-W: Number of words
+W: The collection of all the words
+n_w: Number of words
 D: Number of documents
 
 Theta ~ Dirichlet(alpha), document-topic distribution
@@ -81,6 +82,7 @@ Theta, Phi, z = lda.lda_gibbs(D, T, W, Theta, Phi, X, z, alpha, beta, iterations
 print(Theta)
 print(Phi)
 print(z)
+print(X)
 
 # Your goal is to give me a Theta file like this after 2000 iterations:
 # [[0.14285714 0.85714286]

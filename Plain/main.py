@@ -67,7 +67,7 @@ z = np.zeros(shape=X.shape, dtype=int)
 for i in range(z.shape[0]):     # document index
     for j in range(z.shape[1]):     # word index
         w = X[i][j]
-        wt_dist = dist_gen.wt_from_Theta(Phi, w)
+        wt_dist = dist_gen.wt_from_Phi(Phi, w)
         z[i][j] = np.random.multinomial(1, wt_dist).argmax()
 
 # # If you use inference method, you can assign them randomly at first. You don't need to use

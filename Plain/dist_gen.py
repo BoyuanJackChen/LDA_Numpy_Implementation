@@ -1,7 +1,7 @@
 import numpy as np
 
 # This function assumes that W = [0,1,2,...,n_w-1]
-def wt_from_Theta(Phi, w):
+def wt_from_Phi(Phi, w):
     wt_dist = Phi[:,w]
     wt_dist = wt_dist / np.sum(wt_dist)
     return wt_dist

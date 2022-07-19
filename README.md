@@ -1,4 +1,4 @@
-# Baby_LDA_Implementation
+# LDA Numpy Implementation with Baby Example
 
 This is a tiny LDA implementation from Boyuan Chen and Yi Wei. The goal is to help first-time topic-modeling learners to acquire the knowledge faster. The corpus looks like:
 
